@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data
+data/raw/
+data/external/
+*.zip
+
+# Large or temporary files
+*.log
+*.tmp
+.DS_Store
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Overleaf/LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
