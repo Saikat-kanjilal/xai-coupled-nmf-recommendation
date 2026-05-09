@@ -1,0 +1,22 @@
+{
+  "title": "Descriptor-Grounded Coupled NMF for Explainable Recommendation",
+  "upload_type": "software",
+  "description": "Source code, configuration files, processed experimental result tables, manuscript-ready figures, statistical analysis outputs, and reproducibility assets for descriptor-grounded coupled non-negative matrix factorization for explainable recommendation using MovieLens datasets.",
+  "creators": [
+    {
+      "name": "Kanjilal, Saikat",
+      "affiliation": "Department of Mathematics, JIS University, Kolkata, India"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "recommender systems",
+    "matrix factorization",
+    "non-negative matrix factorization",
+    "explainable AI",
+    "collaborative filtering",
+    "MovieLens"
+  ],
+  "related_identifiers": [],
+  "version": "1.0.0"
+}
