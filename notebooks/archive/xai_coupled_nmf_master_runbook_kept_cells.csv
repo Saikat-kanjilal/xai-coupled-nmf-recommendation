@@ -1,0 +1,271 @@
+original_idx,stage,first_line,nchars
+0,1. Project setup and Google Drive mounting,from google.colab import drive,322
+1,1. Project setup and Google Drive mounting,from google.colab import drive,60
+2,1. Project setup and Google Drive mounting,"PROJECT_ROOT = ""/content/drive/MyDrive/xai_coupled_nmf_project""",76
+3,1. Project setup and Google Drive mounting,import os,612
+4,1. Project setup and Google Drive mounting,%cd /content/drive/MyDrive/xai_coupled_nmf_project,50
+5,1. Project setup and Google Drive mounting,!find /content/drive/MyDrive/xai_coupled_nmf_project -maxdepth 2 -type d | sort,79
+6,1. Project setup and Google Drive mounting,import zipfile,230
+7,1. Project setup and Google Drive mounting,!find /content/drive/MyDrive/xai_coupled_nmf_project/src -maxdepth 1 -type f | sort,83
+8,1. Project setup and Google Drive mounting,!python src/build_dataset_summary.py \,340
+9,1. Project setup and Google Drive mounting,"PROJECT_ROOT = ""/content/drive/MyDrive/xai_coupled_nmf_project""",114
+10,1. Project setup and Google Drive mounting,"!find /content/drive/MyDrive/xai_coupled_nmf_project -name ""build_dataset_summary.py""",85
+11,1. Project setup and Google Drive mounting,import os,1099
+14,1. Project setup and Google Drive mounting,"PROJECT_ROOT = ""/content/drive/MyDrive/xai_coupled_nmf_project""",588
+15,2. MovieLens latest-small preprocessing and split generation,# Create:,108
+16,2. MovieLens latest-small preprocessing and split generation,!python src/build_dataset_summary.py \,385
+17,2. MovieLens latest-small preprocessing and split generation,"PROJECT_ROOT = ""/content/drive/MyDrive/xai_coupled_nmf_project""",552
+18,2. MovieLens latest-small preprocessing and split generation,# Optional extended dataset: MovieLens 20M,289
+20,2. MovieLens latest-small preprocessing and split generation,!ls -lh data/raw/ml-latest-small,32
+21,2. MovieLens latest-small preprocessing and split generation,!python src/preprocess_ratings.py \,329
+22,2. MovieLens latest-small preprocessing and split generation,!python src/build_item_descriptors.py \,411
+23,2. MovieLens latest-small preprocessing and split generation,!ls -lh data/processed/,23
+24,2. MovieLens latest-small preprocessing and split generation,import pandas as pd,288
+26,2. MovieLens latest-small preprocessing and split generation,"pd.read_csv(""results/csv/ml_latest_small_dataset_summary.csv"")",62
+27,2. MovieLens latest-small preprocessing and split generation,!python src/generate_splits.py \,347
+28,2. MovieLens latest-small preprocessing and split generation,!python src/check_evaluation_pipeline.py \,352
+29,2. MovieLens latest-small preprocessing and split generation,!ls -lh results/csv/,20
+30,2. MovieLens latest-small preprocessing and split generation,import pandas as pd,770
+31,3. Baseline benchmark scripts and initial benchmark execution,import numpy as np,1583
+32,3. Baseline benchmark scripts and initial benchmark execution,%%writefile src/run_main_benchmarks.py,944
+33,3. Baseline benchmark scripts and initial benchmark execution,%%writefile -a src/run_main_benchmarks.py,1877
+34,3. Baseline benchmark scripts and initial benchmark execution,%%writefile -a src/run_main_benchmarks.py,2091
+35,3. Baseline benchmark scripts and initial benchmark execution,%%writefile -a src/run_main_benchmarks.py,2408
+36,3. Baseline benchmark scripts and initial benchmark execution,%%writefile -a src/run_main_benchmarks.py,2771
+37,3. Baseline benchmark scripts and initial benchmark execution,%%writefile -a src/run_main_benchmarks.py,2578
+38,3. Baseline benchmark scripts and initial benchmark execution,%%writefile -a src/run_main_benchmarks.py,3422
+39,3. Baseline benchmark scripts and initial benchmark execution,%%writefile -a src/run_main_benchmarks.py,791
+40,3. Baseline benchmark scripts and initial benchmark execution,!python -m py_compile src/run_main_benchmarks.py,78
+42,3. Baseline benchmark scripts and initial benchmark execution,!python src/run_main_benchmarks.py \,559
+43,3. Baseline benchmark scripts and initial benchmark execution,from pathlib import Path,234
+44,3. Baseline benchmark scripts and initial benchmark execution,from pathlib import Path,347
+45,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,951
+46,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,1739
+47,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,1717
+48,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,2093
+49,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,8587
+50,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,441
+51,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,4470
+52,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,1813
+53,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,1241
+54,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,11351
+55,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,3547
+56,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,11469
+57,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,1467
+58,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,716
+59,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,4786
+60,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,10789
+61,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,3887
+62,3. Baseline benchmark scripts and initial benchmark execution,write_chunk(,2206
+63,3. Baseline benchmark scripts and initial benchmark execution,!python -m py_compile src/benchmark_utils.py,195
+66,3. Baseline benchmark scripts and initial benchmark execution,import pandas as pd,132
+67,3. Baseline benchmark scripts and initial benchmark execution,from pathlib import Path,273
+69,3. Baseline benchmark scripts and initial benchmark execution,%%writefile -a src/run_main_benchmarks.py,1889
+89,3. Baseline benchmark scripts and initial benchmark execution,!rm -f src/benchmark_utils.py src/benchmark_models.py src/run_main_benchmarks.py,117
+90,3. Baseline benchmark scripts and initial benchmark execution,%%bash,4392
+91,3. Baseline benchmark scripts and initial benchmark execution,from pathlib import Path,226
+92,3. Baseline benchmark scripts and initial benchmark execution,"def append_lines(path, lines):",416
+93,3. Baseline benchmark scripts and initial benchmark execution,"def append_lines(path, lines):",1505
+94,3. Baseline benchmark scripts and initial benchmark execution,"def append_lines(path, lines):",1690
+95,3. Baseline benchmark scripts and initial benchmark execution,"def append_lines(path, lines):",1699
+96,3. Baseline benchmark scripts and initial benchmark execution,"def append_lines(path, lines):",1478
+97,3. Baseline benchmark scripts and initial benchmark execution,"def append_lines(path, lines):",1703
+99,3. Baseline benchmark scripts and initial benchmark execution,!python -m py_compile src/benchmark_models.py,45
+100,3. Baseline benchmark scripts and initial benchmark execution,!python -m py_compile src/benchmark_utils.py,139
+102,3. Baseline benchmark scripts and initial benchmark execution,!python src/run_coupled_nmf.py \,361
+104,3. Baseline benchmark scripts and initial benchmark execution,import pandas as pd,268
+105,3. Baseline benchmark scripts and initial benchmark execution,import pandas as pd,269
+106,3. Baseline benchmark scripts and initial benchmark execution,import pandas as pd,984
+107,"4. Coupled NMF script construction, execution, and correction",from pathlib import Path,384
+108,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",425
+109,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",798
+110,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1067
+111,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1106
+112,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1827
+113,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1250
+114,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",868
+115,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",825
+116,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",2381
+117,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",4420
+118,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1063
+119,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",3197
+120,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",2957
+121,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",919
+122,"4. Coupled NMF script construction, execution, and correction",!python -m py_compile src/run_coupled_nmf.py,44
+123,"4. Coupled NMF script construction, execution, and correction",!python src/run_coupled_nmf.py \,555
+124,"4. Coupled NMF script construction, execution, and correction",from pathlib import Path,314
+125,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1193
+126,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",3114
+127,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",3029
+128,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",3956
+129,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1171
+130,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",3783
+131,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1853
+132,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",3894
+133,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1011
+134,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1069
+135,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",1360
+136,"4. Coupled NMF script construction, execution, and correction","append_lines(""src/run_coupled_nmf.py"", [",903
+137,"4. Coupled NMF script construction, execution, and correction",!wc -l src/run_coupled_nmf.py,74
+139,"4. Coupled NMF script construction, execution, and correction",!pwd,98
+140,"4. Coupled NMF script construction, execution, and correction",!python -m py_compile src/benchmark_utils.py,135
+142,"4. Coupled NMF script construction, execution, and correction",from pathlib import Path,326
+143,"4. Coupled NMF script construction, execution, and correction",import textwrap,450
+144,"4. Coupled NMF script construction, execution, and correction",write_part(,2681
+145,"4. Coupled NMF script construction, execution, and correction",write_part(,1798
+146,"4. Coupled NMF script construction, execution, and correction",write_part(,3592
+147,"4. Coupled NMF script construction, execution, and correction",write_part(,3623
+148,"4. Coupled NMF script construction, execution, and correction",!cd /content/drive/MyDrive/xai_coupled_nmf_project && wc -l src/run_coupled_nmf.py,296
+149,"4. Coupled NMF script construction, execution, and correction",%cd /content/drive/MyDrive/xai_coupled_nmf_project,607
+150,"4. Coupled NMF script construction, execution, and correction",import pandas as pd,269
+151,"4. Coupled NMF script construction, execution, and correction",!ls -lh results/csv/ml_latest_small_factor_descriptor_weights.csv,183
+152,"4. Coupled NMF script construction, execution, and correction",import pandas as pd,487
+153,"4. Coupled NMF script construction, execution, and correction",import shutil,458
+155,"4. Coupled NMF script construction, execution, and correction",import shutil,698
+156,5. Coupled NMF tuning and selected configuration,%%writefile src/run_coupled_nmf_tuning.py,7416
+157,5. Coupled NMF tuning and selected configuration,write_part(,843
+158,5. Coupled NMF tuning and selected configuration,write_part(,1312
+159,5. Coupled NMF tuning and selected configuration,write_part(,1084
+160,5. Coupled NMF tuning and selected configuration,write_part(,1893
+161,5. Coupled NMF tuning and selected configuration,write_part(,996
+162,5. Coupled NMF tuning and selected configuration,write_part(,2011
+163,5. Coupled NMF tuning and selected configuration,write_part(,1131
+164,5. Coupled NMF tuning and selected configuration,write_part(,1111
+165,5. Coupled NMF tuning and selected configuration,write_part(,1535
+166,5. Coupled NMF tuning and selected configuration,write_part(,1389
+167,5. Coupled NMF tuning and selected configuration,!cd /content/drive/MyDrive/xai_coupled_nmf_project && wc -l src/run_coupled_nmf_tuning.py,194
+168,5. Coupled NMF tuning and selected configuration,from pathlib import Path,281
+169,5. Coupled NMF tuning and selected configuration,import textwrap,460
+171,5. Coupled NMF tuning and selected configuration,write_part(,1921
+172,5. Coupled NMF tuning and selected configuration,write_part(,1847
+173,5. Coupled NMF tuning and selected configuration,write_part(,897
+174,5. Coupled NMF tuning and selected configuration,write_part(,2042
+175,5. Coupled NMF tuning and selected configuration,write_part(,4024
+176,5. Coupled NMF tuning and selected configuration,write_part(,1380
+178,5. Coupled NMF tuning and selected configuration,%cd /content/drive/MyDrive/xai_coupled_nmf_project,1040
+179,5. Coupled NMF tuning and selected configuration,import pandas as pd,648
+180,5. Coupled NMF tuning and selected configuration,!ls -lh results/csv/ml_latest_small_factor_descriptor_weights.csv,299
+181,5. Coupled NMF tuning and selected configuration,import shutil,1093
+182,5. Coupled NMF tuning and selected configuration,import pandas as pd,1376
+183,5. Coupled NMF tuning and selected configuration,import pandas as pd,533
+185,6. Explanation metrics and extended fidelity analysis,from pathlib import Path,549
+186,6. Explanation metrics and extended fidelity analysis,write_part(,342
+187,6. Explanation metrics and extended fidelity analysis,write_part(,977
+188,6. Explanation metrics and extended fidelity analysis,write_part(,2001
+189,6. Explanation metrics and extended fidelity analysis,write_part(,3093
+190,6. Explanation metrics and extended fidelity analysis,write_part(,1072
+191,6. Explanation metrics and extended fidelity analysis,!cd /content/drive/MyDrive/xai_coupled_nmf_project && wc -l src/run_explanation_metrics.py,196
+192,6. Explanation metrics and extended fidelity analysis,%cd /content/drive/MyDrive/xai_coupled_nmf_project,895
+193,6. Explanation metrics and extended fidelity analysis,import pandas as pd,662
+194,6. Explanation metrics and extended fidelity analysis,import pandas as pd,1508
+196,6. Explanation metrics and extended fidelity analysis,import sys,1869
+198,6. Explanation metrics and extended fidelity analysis,"PROJECT_ROOT = ""/content/drive/MyDrive/xai_coupled_nmf_project""",183
+199,6. Explanation metrics and extended fidelity analysis,import sys,330
+200,6. Explanation metrics and extended fidelity analysis,from google.colab import drive,1860
+201,6. Explanation metrics and extended fidelity analysis,from google.colab import drive,1545
+202,6. Explanation metrics and extended fidelity analysis,import pandas as pd,1757
+203,6. Explanation metrics and extended fidelity analysis,from pathlib import Path,2521
+204,6. Explanation metrics and extended fidelity analysis,"def compute_mean_factor_coherence(descriptors, B, feature_cols, top_m=5):",2808
+205,6. Explanation metrics and extended fidelity analysis,"high_fid = extended_instances.sort_values(""fidelity_at_10"", ascending=False).head(30)",597
+206,6. Explanation metrics and extended fidelity analysis,import pandas as pd,455
+207,6. Explanation metrics and extended fidelity analysis,!ls -lh /content/drive/MyDrive/xai_coupled_nmf_project/results/csv/ml_latest_small_explanation_instances_extended.csv,595
+208,6. Explanation metrics and extended fidelity analysis,import pandas as pd,379
+209,6. Explanation metrics and extended fidelity analysis,from pathlib import Path,991
+210,6. Explanation metrics and extended fidelity analysis,!ls -lh /content/drive/MyDrive/xai_coupled_nmf_project/results/csv/ml_latest_small_*.csv,88
+211,6. Explanation metrics and extended fidelity analysis,from pathlib import Path,498
+212,6. Explanation metrics and extended fidelity analysis,import shutil,1389
+213,6. Explanation metrics and extended fidelity analysis,from pathlib import Path,625
+214,6. Explanation metrics and extended fidelity analysis,from google.colab import drive,1149
+215,6. Explanation metrics and extended fidelity analysis,import pandas as pd,774
+216,7. Interpretability-oriented diagnostic tuning,def compute_fidelity_for_top_recs(,1504
+217,7. Interpretability-oriented diagnostic tuning,def evaluate_interpretability_config(,2495
+218,7. Interpretability-oriented diagnostic tuning,"k_values = [10, 20, 30, 40]",1220
+219,7. Interpretability-oriented diagnostic tuning,"grid = pd.read_csv(PROJECT_ROOT / ""results/csv/ml_latest_small_interpretability_tuning_grid.csv"")",1016
+220,7. Interpretability-oriented diagnostic tuning,accuracy_selected = pd.read_csv(,421
+221,7. Interpretability-oriented diagnostic tuning,import pandas as pd,1358
+222,7. Interpretability-oriented diagnostic tuning,from pathlib import Path,471
+223,7. Interpretability-oriented diagnostic tuning,v3_files_to_archive = [,546
+224,7. Interpretability-oriented diagnostic tuning,from datetime import datetime,450
+225,7. Interpretability-oriented diagnostic tuning,v3_expected = [,276
+226,7. Interpretability-oriented diagnostic tuning,"v3_selected_path = ARCHIVE_DIR / ""ml_latest_small_interpretability_selected_config_v3.csv""",255
+227,8. Archiving Version 2/Version 3 latest-small outputs,from pathlib import Path,706
+228,8. Archiving Version 2/Version 3 latest-small outputs,import shutil,1827
+229,8. Archiving Version 2/Version 3 latest-small outputs,"ARCHIVE_DIR = CSV_DIR / ""archive""",1167
+230,8. Archiving Version 2/Version 3 latest-small outputs,"manifest_text = f""""""",1180
+231,8. Archiving Version 2/Version 3 latest-small outputs,import shutil,149
+232,8. Archiving Version 2/Version 3 latest-small outputs,"print(""Bundle contents:"")",114
+233,8. Archiving Version 2/Version 3 latest-small outputs,from pathlib import Path,900
+234,8. Archiving Version 2/Version 3 latest-small outputs,from pathlib import Path,2209
+235,8. Archiving Version 2/Version 3 latest-small outputs,"print(""Bundle contents:"")",114
+236,8. Archiving Version 2/Version 3 latest-small outputs,from pathlib import Path,1275
+237,9. Manuscript-ready LaTeX tables for latest-small,"v2_main_path = find_csv(""ml_latest_small_main_comparison_v2_tuned_coupled.csv"")",1026
+238,9. Manuscript-ready LaTeX tables for latest-small,def tex_escape(text):,1853
+239,9. Manuscript-ready LaTeX tables for latest-small,model_display = {,1915
+240,9. Manuscript-ready LaTeX tables for latest-small,plain = v2_main[v2_main['model_name'] == 'plain_nmf'].iloc[0],1504
+241,9. Manuscript-ready LaTeX tables for latest-small,expl = v2_expl.iloc[0],1803
+242,9. Manuscript-ready LaTeX tables for latest-small,# V2-equivalent row from the Version 3 interpretability grid:,2525
+243,9. Manuscript-ready LaTeX tables for latest-small,table_files = [,1784
+244,9. Manuscript-ready LaTeX tables for latest-small,"print(""Generated paper/tables files:"")",216
+245,9. Manuscript-ready LaTeX tables for latest-small,from pathlib import Path,5428
+246,9. Manuscript-ready LaTeX tables for latest-small,from pathlib import Path,1276
+247,9. Manuscript-ready LaTeX tables for latest-small,# Step 1: Migration of Current CSV Files,2774
+248,9. Manuscript-ready LaTeX tables for latest-small,archive_csv_files = [,1249
+249,9. Manuscript-ready LaTeX tables for latest-small,latex_table_files = [,1393
+250,9. Manuscript-ready LaTeX tables for latest-small,full_report = pd.concat(,2198
+251,9. Manuscript-ready LaTeX tables for latest-small,zip_path = shutil.make_archive(,201
+252,9. Manuscript-ready LaTeX tables for latest-small,"print(""Final bundle contents:"")",126
+253,10. Manuscript-ready figures for latest-small,from pathlib import Path,2405
+254,10. Manuscript-ready figures for latest-small,"v2_main = pd.read_csv(find_csv(""ml_latest_small_main_comparison_v2_tuned_coupled.csv""))",969
+255,10. Manuscript-ready figures for latest-small,model_display = {,1312
+256,10. Manuscript-ready figures for latest-small,"plain = v2_main[v2_main[""model_name""] == ""plain_nmf""].iloc[0]",1214
+257,10. Manuscript-ready figures for latest-small,"instances_ext = pd.read_csv(find_csv(""ml_latest_small_explanation_instances_extended.csv""))",603
+258,10. Manuscript-ready figures for latest-small,"fig, ax = plt.subplots(figsize=(8, 6))",1136
+259,10. Manuscript-ready figures for latest-small,"def build_factor_keyword_lines(df, max_factors=8, keywords_per_factor=5):",1782
+260,10. Manuscript-ready figures for latest-small,"examples = explanation_examples.sort_values(""fidelity_at_10"", ascending=False).head(6).copy()",915
+261,10. Manuscript-ready figures for latest-small,version_rows = [],1773
+262,10. Manuscript-ready figures for latest-small,figure_stems = [,2163
+263,10. Manuscript-ready figures for latest-small,figure_files = [],1245
+264,10. Manuscript-ready figures for latest-small,"print(""Generated paper/figures files:"")",186
+265,11. Final combined latest-small manuscript bundle,from pathlib import Path,1713
+266,11. Final combined latest-small manuscript bundle,current_csv_files = [,1577
+267,11. Final combined latest-small manuscript bundle,archive_csv_files = [,1194
+268,11. Final combined latest-small manuscript bundle,latex_table_files = [,1291
+269,11. Final combined latest-small manuscript bundle,figure_stems = [,1591
+270,11. Final combined latest-small manuscript bundle,include_files = [,916
+271,11. Final combined latest-small manuscript bundle,full_report = pd.concat(,2551
+272,11. Final combined latest-small manuscript bundle,zip_path = shutil.make_archive(,219
+274,11. Final combined latest-small manuscript bundle,for folder in [,235
+275,12. MovieLens 1M preprocessing and smoke testing,from pathlib import Path,352
+276,12. MovieLens 1M preprocessing and smoke testing,"RAW_ML1M_DIR = PROJECT_ROOT / ""data/raw/ml-1m""",149
+277,12. MovieLens 1M preprocessing and smoke testing,import pandas as pd,978
+278,12. MovieLens 1M preprocessing and smoke testing,"def iterative_filter_ratings(df, min_user_ratings=20, min_item_ratings=20):",2284
+279,12. MovieLens 1M preprocessing and smoke testing,!ls -lh data/processed/ml1m_*.csv,33
+280,12. MovieLens 1M preprocessing and smoke testing,!python src/build_dataset_summary.py \,330
+281,12. MovieLens 1M preprocessing and smoke testing,"ml1m_summary = pd.read_csv(""results/csv/ml1m_dataset_summary.csv"")",88
+282,12. MovieLens 1M preprocessing and smoke testing,!python src/generate_splits.py \,303
+283,12. MovieLens 1M preprocessing and smoke testing,"splits = pd.read_csv(""results/csv/ml1m_split_registry.csv"")",258
+284,12. MovieLens 1M preprocessing and smoke testing,import pandas as pd,1662
+285,12. MovieLens 1M preprocessing and smoke testing,required_ml1m_files = [,426
+286,13. MovieLens 1M seed-42 benchmark and tuning recovery,# ============================================================,6886
+288,13. MovieLens 1M seed-42 benchmark and tuning recovery,from pathlib import Path,206
+289,13. MovieLens 1M seed-42 benchmark and tuning recovery,from pathlib import Path,972
+290,13. MovieLens 1M seed-42 benchmark and tuning recovery,from pathlib import Path,650
+291,13. MovieLens 1M seed-42 benchmark and tuning recovery,from pathlib import Path,1305
+292,14. MovieLens 1M module-free resume and tuning completion,# ============================================================,22370
+293,14. MovieLens 1M module-free resume and tuning completion,from pathlib import Path,722
+294,14. MovieLens 1M module-free resume and tuning completion,from pathlib import Path,759
+295,15. MovieLens 1M seed-42 LaTeX tables,from pathlib import Path,5366
+296,15. MovieLens 1M seed-42 LaTeX tables,from pathlib import Path,13173
+297,16. MovieLens 1M seed-42 figures,# ============================================================,15635
+298,17. MovieLens 1M seed-42 secondary-validation bundle,# ============================================================,11983
+299,18. MovieLens 1M three-seed final evaluation,# ============================================================,22268
+300,19. MovieLens 1M three-seed table and figure,from pathlib import Path,7684
+301,20. MovieLens 1M three-seed journal-ready bundle,# ============================================================,10791
+302,21. Statistical significance testing,# ============================================================,14597
+303,21. Statistical significance testing,from pathlib import Path,918
+304,22. Statistical significance figures,# ============================================================,10268
+305,23. Final statistical significance bundle,# ============================================================,11822
+306,24. Repository-ready package creation and audit,# ============================================================,21091
+307,24. Repository-ready package creation and audit,from pathlib import Path,1530
+308,24. Repository-ready package creation and audit,from pathlib import Path,813
+309,24. Repository-ready package creation and audit,from pathlib import Path,449

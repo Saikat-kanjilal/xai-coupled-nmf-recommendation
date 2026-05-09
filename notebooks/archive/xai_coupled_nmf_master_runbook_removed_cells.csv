@@ -1,0 +1,43 @@
+idx,reason,first_line
+12,exact_duplicate,!find /content/drive/MyDrive/xai_coupled_nmf_project/src -maxdepth 1 -type f | sort
+13,exact_duplicate,!python src/build_dataset_summary.py \
+19,exact_duplicate,"PROJECT_ROOT = ""/content/drive/MyDrive/xai_coupled_nmf_project"""
+25,exact_duplicate,!python src/build_dataset_summary.py \
+41,exact_duplicate,!python -m py_compile src/run_main_benchmarks.py
+64,exact_duplicate,!python -m py_compile src/run_main_benchmarks.py
+65,exact_duplicate,!python src/run_main_benchmarks.py \
+68,exact_duplicate,%%writefile src/run_main_benchmarks.py
+70,exact_duplicate,%%writefile -a src/run_main_benchmarks.py
+71,exact_duplicate,%%writefile -a src/run_main_benchmarks.py
+72,exact_duplicate,%%writefile -a src/run_main_benchmarks.py
+73,exact_duplicate,%%writefile -a src/run_main_benchmarks.py
+74,exact_duplicate,%%writefile -a src/run_main_benchmarks.py
+75,exact_duplicate,%%writefile -a src/run_main_benchmarks.py
+76,exact_duplicate,!python src/run_main_benchmarks.py \
+77,exact_duplicate,import pandas as pd
+78,exact_duplicate,import pandas as pd
+79,exact_duplicate,import pandas as pd
+80,exact_duplicate,import pandas as pd
+81,exact_duplicate,import pandas as pd
+82,exact_duplicate,import pandas as pd
+83,exact_duplicate,import pandas as pd
+84,exact_duplicate,import pandas as pd
+85,exact_duplicate,import pandas as pd
+86,exact_duplicate,import pandas as pd
+87,exact_duplicate,import pandas as pd
+88,exact_duplicate,import pandas as pd
+98,exact_duplicate,"def append_lines(path, lines):"
+101,exact_duplicate,!python src/run_main_benchmarks.py \
+103,failed_cell_error_output,import pandas as pd
+138,exact_duplicate,!python src/run_coupled_nmf.py \
+141,exact_duplicate,!python src/run_coupled_nmf.py \
+154,exact_duplicate,"PROJECT_ROOT = ""/content/drive/MyDrive/xai_coupled_nmf_project"""
+170,exact_duplicate,write_part(
+177,exact_duplicate,!cd /content/drive/MyDrive/xai_coupled_nmf_project && wc -l src/run_coupled_nmf_tuning.py
+184,exact_duplicate,"PROJECT_ROOT = ""/content/drive/MyDrive/xai_coupled_nmf_project"""
+195,exact_duplicate,"PROJECT_ROOT = ""/content/drive/MyDrive/xai_coupled_nmf_project"""
+197,exact_duplicate,from google.colab import drive
+273,exact_duplicate,"print(""Final bundle contents:"")"
+287,failed_cell_error_output,# ============================================================
+310,empty,
+311,exact_duplicate,from pathlib import Path
