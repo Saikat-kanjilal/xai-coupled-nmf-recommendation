@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Explanation metrics for the tuned coupled NMF on MovieLens 1M test recommendations.}
+\label{tab:ml1m_coupled_test_explanation_metrics_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccc}
+\toprule
+Fid.@2 & Fid.@3 & Fid.@5 & Fid.@10 & Instances & $k$ & $\alpha$ & $\beta$ \\
+\midrule
+0.0972 & 0.1372 & 0.2086 & 0.3579 & 1000 & 60 & 0.0500 & 0.0001 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize Fidelity@r measures the proportion of the recommendation score explained by the top r additive latent-factor contributions. The MovieLens 1M explanations are based on genre-only descriptors.
+\end{minipage}
+\end{table}

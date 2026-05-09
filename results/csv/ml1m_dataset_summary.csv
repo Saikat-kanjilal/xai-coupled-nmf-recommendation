@@ -1,0 +1,9 @@
+statistic,value
+num_users,6022
+num_items,3043
+num_ratings,995154
+rating_scale,unknown
+descriptor_source,from_processed_descriptor_file
+descriptor_dim,18
+split_ratio,80/10/10
+sparsity,0.945694

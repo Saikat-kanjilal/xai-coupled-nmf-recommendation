@@ -1,0 +1,17 @@
+ml_latest_small:
+  selected_model: coupled_nmf
+  descriptor_source: tags_genres
+  selection_basis: validation ranking performance
+  notes: >
+    Final configuration was selected from the coupled NMF validation experiments.
+    See the selected configuration CSV in results/csv.
+
+ml1m:
+  selected_model: coupled_nmf_tuned
+  descriptor_source: genres
+  k: 60
+  alpha: 0.05
+  beta: 0.0001
+  lambda_reg: 0.01
+  epochs: 20
+  selection_basis: reduced seed-42 validation grid using positive semantic coupling

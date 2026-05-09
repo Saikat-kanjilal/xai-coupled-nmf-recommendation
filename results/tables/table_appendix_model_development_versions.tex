@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Development record of coupled NMF configurations.}
+\label{tab:appendix_model_development_versions}
+\begin{tabular}{llccccc}
+\toprule
+Version & Role & RMSE & MAE & Fid.@10 & $\alpha$ & NDCG@10 \\
+\midrule
+V1 initial coupled NMF & Initial untuned prototype & 0.8461 & 0.6496 & -- & -- & 0.0240 \\
+V2 accuracy-tuned coupled NMF & Main manuscript model & 0.8340 & 0.6379 & 0.3625 & -- & 0.0312 \\
+V3 interpretability diagnostic & Diagnostic tuning candidate & 0.8313 & 0.6365 & 0.3627 & 0.2000 & 0.0350 \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\begin{minipage}{0.92\textwidth}
+\footnotesize This table is intended for dissertation-level reproducibility documentation. Version 2 is retained as the main model because Version 3 gives only negligible improvement in Fidelity@10.
+\end{minipage}
+\end{table}

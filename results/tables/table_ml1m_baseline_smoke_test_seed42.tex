@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Evaluation-pipeline sanity check on MovieLens 1M using seed 42.}
+\label{tab:ml1m_baseline_smoke_test_seed42}
+\begin{tabular}{lcccc}
+\toprule
+Predictor & RMSE & MAE & Train ratings & Test ratings \\
+\midrule
+global\_mean & 1.1160 & 0.9334 & 796172 & 99527 \\
+item\_mean & 0.9781 & 0.7813 & 796172 & 99527 \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize This sanity check verifies the MovieLens 1M split and prediction-evaluation pipeline. The global-mean and item-mean predictors are not treated as final competing models.
+\end{minipage}
+\end{table}

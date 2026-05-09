@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering
+\caption{Secondary validation on MovieLens 1M using seed 42. The tuned coupled NMF model is selected from the reduced validation grid, whereas the remaining baselines are evaluated using the same split.}
+\label{tab:ml1m_secondary_validation_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccc}
+\toprule
+Model & RMSE & MAE & P@5 & R@5 & NDCG@5 & P@10 & R@10 & NDCG@10 \\
+\midrule
+Biased MF & 0.8481 & 0.6673 & 0.0496 & 0.0301 & 0.0534 & 0.0444 & 0.0525 & 0.0569 \\
+Plain NMF & 0.8498 & 0.6696 & 0.0533 & 0.0304 & 0.0591 & 0.0473 & 0.0551 & 0.0620 \\
+Coupled NMF & 0.8717 & 0.6890 & 0.0386 & 0.0211 & 0.0390 & 0.0338 & 0.0362 & 0.0406 \\
+Tuned Coupled NMF & 0.8594 & 0.6770 & 0.0545 & 0.0302 & 0.0591 & 0.0459 & 0.0506 & 0.0594 \\
+Item-CF & 0.9986 & 0.7947 & 0.0028 & 0.0013 & 0.0027 & 0.0039 & 0.0035 & 0.0039 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize MovieLens 1M is used as a larger secondary validation dataset with genre-only item descriptors. The tuned coupled NMF improves substantially over the untuned coupled NMF and remains competitive with plain NMF on short-list ranking metrics, although plain NMF remains stronger on RMSE, MAE, and NDCG@10.
+\end{minipage}
+\end{table}

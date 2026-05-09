@@ -1,0 +1,2 @@
+dataset_name,model_name,fidelity_at_2,fidelity_at_3,mean_coherence,seed,k,alpha
+ml_latest_small,coupled_nmf,0.08730899358540774,0.126373141951859,0.018421521823620425,42,40,0.1

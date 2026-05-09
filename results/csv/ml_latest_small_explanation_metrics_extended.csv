@@ -1,0 +1,2 @@
+dataset_name,model_name,fidelity_at_2,fidelity_at_3,fidelity_at_5,fidelity_at_10,mean_coherence,stability_score,seed,k,alpha,beta,lambda_reg,epochs,num_explanation_instances
+ml_latest_small,coupled_nmf,0.08730899358540774,0.126373141951859,0.19932221627235414,0.36251814529299736,0.018421521823620425,,42,40,0.1,0.0001,0.01,30,1000

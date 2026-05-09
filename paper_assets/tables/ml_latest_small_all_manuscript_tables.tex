@@ -1,0 +1,158 @@
+% Auto-generated manuscript-ready tables for ml_latest_small.
+% Required LaTeX packages: booktabs, graphicx.
+
+% ------------------------------------------------------------
+% table_ml_latest_small_main_comparison_v2.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Main recommendation performance on MovieLens latest-small. Values are reported as mean $\pm$ standard deviation over five random seeds.}
+\label{tab:ml_latest_small_main_comparison}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccc}
+\toprule
+Model & RMSE & MAE & P@5 & P@10 & R@5 & R@10 & NDCG@5 & NDCG@10 \\
+\midrule
+Biased MF & $0.8239\pm 0.0033$ & $0.6279\pm 0.0036$ & $0.0291\pm 0.0030$ & $0.0266\pm 0.0013$ & $0.0226\pm 0.0038$ & $0.0435\pm 0.0037$ & $0.0314\pm 0.0043$ & $0.0372\pm 0.0035$ \\
+Plain NMF & $0.8339\pm 0.0038$ & $0.6393\pm 0.0049$ & $0.0256\pm 0.0038$ & $0.0224\pm 0.0028$ & $0.0198\pm 0.0062$ & $0.0333\pm 0.0080$ & $0.0273\pm 0.0051$ & $0.0302\pm 0.0052$ \\
+Coupled NMF & $0.8340\pm 0.0021$ & $0.6379\pm 0.0033$ & $0.0256\pm 0.0023$ & $0.0231\pm 0.0023$ & $0.0205\pm 0.0015$ & $0.0361\pm 0.0028$ & $0.0270\pm 0.0033$ & $0.0312\pm 0.0022$ \\
+Item-CF & $0.8942\pm 0.0034$ & $0.6874\pm 0.0031$ & $0.0070\pm 0.0010$ & $0.0079\pm 0.0009$ & $0.0047\pm 0.0012$ & $0.0098\pm 0.0018$ & $0.0073\pm 0.0012$ & $0.0096\pm 0.0013$ \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml_latest_small_selected_config_v2.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Accuracy-oriented selected coupled NMF configuration obtained by validation tuning.}
+\label{tab:ml_latest_small_selected_config}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\toprule
+$k$ & $\alpha$ & $\beta$ & $\lambda$ & Epochs & RMSE & MAE & P@10 & R@10 & NDCG@10 \\
+\midrule
+40 & 0.1000 & 0.0001 & 0.0100 & 20 & 0.8429 & 0.6469 & 0.0211 & 0.0330 & 0.0326 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml_latest_small_plain_vs_coupled_delta_v2.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Direct comparison between rating-only NMF and the proposed coupled NMF on MovieLens latest-small.}
+\label{tab:ml_latest_small_plain_vs_coupled_delta}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+Metric & Plain NMF & Coupled NMF & Change & Change (%) & Better \\
+\midrule
+RMSE & 0.8339 & 0.8340 & 0.0001 & 0.01% & Plain NMF \\
+MAE & 0.6393 & 0.6379 & -0.0014 & -0.22% & Coupled NMF \\
+P@5 & 0.0256 & 0.0256 & -0.0000 & -0.12% & Plain NMF \\
+P@10 & 0.0224 & 0.0231 & 0.0007 & 3.26% & Coupled NMF \\
+R@5 & 0.0198 & 0.0205 & 0.0007 & 3.65% & Coupled NMF \\
+R@10 & 0.0333 & 0.0361 & 0.0028 & 8.45% & Coupled NMF \\
+NDCG@5 & 0.0273 & 0.0270 & -0.0003 & -1.08% & Plain NMF \\
+NDCG@10 & 0.0302 & 0.0312 & 0.0010 & 3.24% & Coupled NMF \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml_latest_small_explanation_metrics_v2.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Explanation-oriented metrics for the tuned coupled NMF model.}
+\label{tab:ml_latest_small_explanation_metrics}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ccccccc}
+\toprule
+Fid.@2 & Fid.@3 & Fid.@5 & Fid.@10 & Mean coherence & Stability & Instances \\
+\midrule
+0.0873 & 0.1264 & 0.1993 & 0.3625 & 0.0184 & -- & 1000 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize Fidelity@r measures the proportion of the recommendation score explained by the top $r$ additive latent-factor contributions.
+\end{minipage}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml_latest_small_fidelity_distribution_v2.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Distribution of explanation fidelity over 1000 recommendation instances.}
+\label{tab:ml_latest_small_fidelity_distribution}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccc}
+\toprule
+Metric & Mean & Std. & Min & Q1 & Median & Q3 & Max \\
+\midrule
+Fidelity@2 & 0.0873 & 0.0228 & 0.0617 & 0.0710 & 0.0790 & 0.0981 & 0.2193 \\
+Fidelity@3 & 0.1264 & 0.0306 & 0.0915 & 0.1043 & 0.1157 & 0.1413 & 0.3130 \\
+Fidelity@5 & 0.1993 & 0.0419 & 0.1487 & 0.1681 & 0.1854 & 0.2208 & 0.4215 \\
+Fidelity@10 & 0.3625 & 0.0597 & 0.2875 & 0.3166 & 0.3433 & 0.3963 & 0.6411 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml_latest_small_v3_interpretability_diagnostic.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Interpretability-oriented diagnostic comparison on the validation split.}
+\label{tab:ml_latest_small_v3_interpretability_diagnostic}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccccc}
+\toprule
+Configuration & $k$ & $\alpha$ & $\beta$ & $\lambda$ & RMSE & MAE & Fid.@5 & Fid.@10 & NDCG@10 \\
+\midrule
+Accuracy-oriented region & 40 & 0.1000 & 0.0001 & 0.0100 & 0.8313 & 0.6365 & 0.1993 & 0.3625 & 0.0351 \\
+Interpretability-oriented candidate & 40 & 0.2000 & 0.0001 & 0.0100 & 0.8313 & 0.6365 & 0.1994 & 0.3627 & 0.0350 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize The diagnostic grid shows that increasing semantic coupling from $\alpha=0.1$ to $\alpha=0.2$ retains validation ranking quality but produces only a negligible improvement in Fidelity@10.
+\end{minipage}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml_latest_small_top_v3_fidelity_configs.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Top diagnostic configurations sorted by Fidelity@10.}
+\label{tab:ml_latest_small_top_v3_fidelity_configs}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\toprule
+$k$ & $\alpha$ & $\beta$ & $\lambda$ & RMSE & MAE & Fid.@3 & Fid.@5 & Fid.@10 & NDCG@10 \\
+\midrule
+10 & 0.2000 & 0.0010 & 0.0100 & 0.8391 & 0.6420 & 0.3686 & 0.5798 & 1.0000 & 0.0289 \\
+10 & 0.2000 & 0.0050 & 0.0100 & 0.8391 & 0.6420 & 0.3686 & 0.5798 & 1.0000 & 0.0289 \\
+10 & 0.1000 & 0.0050 & 0.0100 & 0.8391 & 0.6420 & 0.3686 & 0.5798 & 1.0000 & 0.0289 \\
+10 & 0.2000 & 0.0001 & 0.0100 & 0.8391 & 0.6420 & 0.3686 & 0.5798 & 1.0000 & 0.0289 \\
+10 & 0.1000 & 0.0001 & 0.0100 & 0.8391 & 0.6420 & 0.3686 & 0.5798 & 1.0000 & 0.0289 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize Configurations with $k=10$ attain Fidelity@10 equal to one because the top ten factors exhaust all latent dimensions.
+\end{minipage}
+\end{table}

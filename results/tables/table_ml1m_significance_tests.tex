@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\caption{Paired seed-level significance tests for MovieLens 1M.}
+\label{tab:ml1m_significance_tests}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllcccccc}
+\toprule
+Reference & Target & Metric & Ref. mean & Target mean & Improvement & $p_t$ & $p_w$ & $d_z$ \\
+\midrule
+Plain NMF & Tuned Coupled NMF & RMSE & 0.8509 & 0.8609 & -0.0100 & $0.0039$ & $0.2500$ & -9.2604 \\
+Plain NMF & Tuned Coupled NMF & MAE & 0.6697 & 0.6770 & -0.0073 & $0.0043$ & $0.2500$ & -8.7845 \\
+Plain NMF & Tuned Coupled NMF & P@5 & 0.0537 & 0.0557 & 0.0020 & $0.0465$ & $0.2500$ & 2.5842 \\
+Plain NMF & Tuned Coupled NMF & P@10 & 0.0473 & 0.0468 & -0.0006 & $0.3977$ & $0.5000$ & -0.6161 \\
+Plain NMF & Tuned Coupled NMF & NDCG@5 & 0.0597 & 0.0611 & 0.0014 & $0.2727$ & $0.2500$ & 0.8653 \\
+Plain NMF & Tuned Coupled NMF & NDCG@10 & 0.0620 & 0.0612 & -0.0008 & $0.5390$ & $0.7500$ & -0.4242 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize The reference model is plain NMF and the target model is the tuned coupled NMF. MovieLens 1M has only three seeds, so the tests should be interpreted as supporting stability evidence rather than strong inferential evidence.
+\end{minipage}
+\end{table}

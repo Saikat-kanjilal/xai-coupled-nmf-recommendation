@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Selected coupled NMF configuration for MovieLens 1M using seed 42.}
+\label{tab:ml1m_coupled_selected_config_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ccccccccccc}
+\toprule
+$k$ & $\alpha$ & $\beta$ & $\lambda$ & Epochs & RMSE & MAE & P@10 & R@10 & NDCG@10 & Fid.@10 \\
+\midrule
+60 & 0.0500 & 0.0001 & 0.0100 & 20 & 0.8632 & 0.6793 & 0.0447 & 0.0476 & 0.0569 & 0.3579 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize The selected configuration is obtained from the reduced validation grid using positive semantic coupling and validation NDCG@10 as the primary selection criterion.
+\end{minipage}
+\end{table}

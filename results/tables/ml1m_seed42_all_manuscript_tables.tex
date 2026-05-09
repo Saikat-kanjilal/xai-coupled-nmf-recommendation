@@ -1,0 +1,151 @@
+% Auto-generated manuscript-ready tables for MovieLens 1M seed-42 secondary validation.
+% Required LaTeX packages: booktabs, graphicx.
+
+% ------------------------------------------------------------
+% table_ml1m_secondary_validation_seed42.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Secondary validation on MovieLens 1M using seed 42. The tuned coupled NMF model is selected from the reduced validation grid, whereas the remaining baselines are evaluated using the same split.}
+\label{tab:ml1m_secondary_validation_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccc}
+\toprule
+Model & RMSE & MAE & P@5 & R@5 & NDCG@5 & P@10 & R@10 & NDCG@10 \\
+\midrule
+Biased MF & 0.8481 & 0.6673 & 0.0496 & 0.0301 & 0.0534 & 0.0444 & 0.0525 & 0.0569 \\
+Plain NMF & 0.8498 & 0.6696 & 0.0533 & 0.0304 & 0.0591 & 0.0473 & 0.0551 & 0.0620 \\
+Coupled NMF & 0.8717 & 0.6890 & 0.0386 & 0.0211 & 0.0390 & 0.0338 & 0.0362 & 0.0406 \\
+Tuned Coupled NMF & 0.8594 & 0.6770 & 0.0545 & 0.0302 & 0.0591 & 0.0459 & 0.0506 & 0.0594 \\
+Item-CF & 0.9986 & 0.7947 & 0.0028 & 0.0013 & 0.0027 & 0.0039 & 0.0035 & 0.0039 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize MovieLens 1M is used as a larger secondary validation dataset with genre-only item descriptors. The tuned coupled NMF improves substantially over the untuned coupled NMF and remains competitive with plain NMF on short-list ranking metrics, although plain NMF remains stronger on RMSE, MAE, and NDCG@10.
+\end{minipage}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml1m_baseline_smoke_test_seed42.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Evaluation-pipeline sanity check on MovieLens 1M using seed 42.}
+\label{tab:ml1m_baseline_smoke_test_seed42}
+\begin{tabular}{lcccc}
+\toprule
+Predictor & RMSE & MAE & Train ratings & Test ratings \\
+\midrule
+global\_mean & 1.1160 & 0.9334 & 796172 & 99527 \\
+item\_mean & 0.9781 & 0.7813 & 796172 & 99527 \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize This sanity check verifies the MovieLens 1M split and prediction-evaluation pipeline. The global-mean and item-mean predictors are not treated as final competing models.
+\end{minipage}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml1m_coupled_selected_config_seed42.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Selected coupled NMF configuration for MovieLens 1M using seed 42.}
+\label{tab:ml1m_coupled_selected_config_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ccccccccccc}
+\toprule
+$k$ & $\alpha$ & $\beta$ & $\lambda$ & Epochs & RMSE & MAE & P@10 & R@10 & NDCG@10 & Fid.@10 \\
+\midrule
+60 & 0.0500 & 0.0001 & 0.0100 & 20 & 0.8632 & 0.6793 & 0.0447 & 0.0476 & 0.0569 & 0.3579 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize The selected configuration is obtained from the reduced validation grid using positive semantic coupling and validation NDCG@10 as the primary selection criterion.
+\end{minipage}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml1m_top_tuning_configs_seed42.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Top MovieLens 1M coupled NMF tuning configurations ranked by validation NDCG@10.}
+\label{tab:ml1m_top_tuning_configs_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\toprule
+$k$ & $\alpha$ & $\beta$ & $\lambda$ & RMSE & MAE & P@10 & R@10 & NDCG@10 & Fid.@10 \\
+\midrule
+60 & 0.0500 & 0.0001 & 0.0100 & 0.8632 & 0.6793 & 0.0447 & 0.0476 & 0.0569 & 0.3579 \\
+60 & 0.0500 & 0.0000 & 0.0100 & 0.8632 & 0.6793 & 0.0447 & 0.0476 & 0.0569 & 0.3579 \\
+60 & 0.0100 & 0.0000 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0100 & 0.0001 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0050 & 0.0001 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0050 & 0.0000 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0000 & 0.0000 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0000 & 0.0001 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize This table reports the strongest configurations from the reduced MovieLens 1M tuning grid. MovieLens 1M uses genre-only descriptors, which are coarser than the tag-and-genre representation used for MovieLens latest-small.
+\end{minipage}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml1m_tuned_vs_untuned_coupled_delta_seed42.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Effect of coupled NMF tuning on MovieLens 1M using seed 42.}
+\label{tab:ml1m_tuned_vs_untuned_coupled_delta_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Metric & Untuned Coupled NMF & Tuned Coupled NMF & Change & Relative improvement \\
+\midrule
+RMSE & 0.8717 & 0.8594 & -0.0124 & 1.42\% \\
+MAE & 0.6890 & 0.6770 & -0.0120 & 1.74\% \\
+P@5 & 0.0386 & 0.0545 & 0.0160 & 41.37\% \\
+R@5 & 0.0211 & 0.0302 & 0.0091 & 42.84\% \\
+NDCG@5 & 0.0390 & 0.0591 & 0.0201 & 51.46\% \\
+P@10 & 0.0338 & 0.0459 & 0.0121 & 35.85\% \\
+R@10 & 0.0362 & 0.0506 & 0.0143 & 39.56\% \\
+NDCG@10 & 0.0406 & 0.0594 & 0.0187 & 46.16\% \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize Positive relative improvement means that the tuned model improves over the untuned coupled NMF. For RMSE and MAE, lower values are better; for ranking metrics, higher values are better.
+\end{minipage}
+\end{table}
+
+% ------------------------------------------------------------
+% table_ml1m_coupled_test_explanation_metrics_seed42.tex
+% ------------------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{Explanation metrics for the tuned coupled NMF on MovieLens 1M test recommendations.}
+\label{tab:ml1m_coupled_test_explanation_metrics_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccc}
+\toprule
+Fid.@2 & Fid.@3 & Fid.@5 & Fid.@10 & Instances & $k$ & $\alpha$ & $\beta$ \\
+\midrule
+0.0972 & 0.1372 & 0.2086 & 0.3579 & 1000 & 60 & 0.0500 & 0.0001 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize Fidelity@r measures the proportion of the recommendation score explained by the top r additive latent-factor contributions. The MovieLens 1M explanations are based on genre-only descriptors.
+\end{minipage}
+\end{table}

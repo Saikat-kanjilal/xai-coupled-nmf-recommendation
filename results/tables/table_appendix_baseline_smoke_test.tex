@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Evaluation-pipeline sanity check on MovieLens latest-small.}
+\label{tab:appendix_baseline_smoke_test}
+\begin{tabular}{lcccc}
+\toprule
+Predictor & RMSE & MAE & Train ratings & Test ratings \\
+\midrule
+global\_mean & 1.0137 & 0.8096 & 54317 & 6804 \\
+item\_mean & 0.9363 & 0.7255 & 54317 & 6804 \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\begin{minipage}{0.92\textwidth}
+\footnotesize This table is intended as a reproducibility sanity check. The global-mean and item-mean predictors are not used as final competing models.
+\end{minipage}
+\end{table}

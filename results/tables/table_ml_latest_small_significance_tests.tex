@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering
+\caption{Paired seed-level significance tests for MovieLens latest-small.}
+\label{tab:ml_latest_small_significance_tests}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllcccccc}
+\toprule
+Reference & Target & Metric & Ref. mean & Target mean & Improvement & $p_t$ & $p_w$ & $d_z$ \\
+\midrule
+Plain NMF & Coupled NMF & RMSE & 0.8339 & 0.8340 & -0.0001 & $0.9339$ & $1.0000$ & -0.0395 \\
+Plain NMF & Coupled NMF & MAE & 0.6393 & 0.6379 & 0.0014 & $0.3369$ & $0.3125$ & 0.4875 \\
+Plain NMF & Coupled NMF & P@10 & 0.0224 & 0.0231 & 0.0007 & $0.5402$ & $0.4375$ & 0.2992 \\
+Plain NMF & Coupled NMF & R@10 & 0.0333 & 0.0361 & 0.0028 & $0.4936$ & $0.6250$ & 0.3365 \\
+Plain NMF & Coupled NMF & NDCG@10 & 0.0302 & 0.0312 & 0.0010 & $0.7974$ & $0.8125$ & 0.1227 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize The reference model is plain NMF and the target model is the coupled NMF. Positive improvement means that the target model is better. $p_t$ denotes the paired $t$-test p-value, $p_w$ denotes the Wilcoxon signed-rank p-value, and $d_z$ is Cohen's paired effect size.
+\end{minipage}
+\end{table}

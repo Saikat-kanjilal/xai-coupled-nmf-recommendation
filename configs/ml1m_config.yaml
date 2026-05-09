@@ -1,0 +1,15 @@
+dataset_name: ml1m
+descriptor_source: genres
+seeds: [42, 123, 2026]
+relevance_threshold: 4.0
+top_k: [5, 10]
+
+models:
+  - biased_mf
+  - plain_nmf
+  - coupled_nmf_tuned
+
+outputs:
+  main_comparison: results/csv/ml1m_3seed_main_comparison.csv
+  run_level_metrics: results/csv/ml1m_3seed_run_level_metrics.csv
+  significance_tests: results/csv/ml1m_significance_tests.csv

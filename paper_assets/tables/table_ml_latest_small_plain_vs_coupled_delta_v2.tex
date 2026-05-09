@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Direct comparison between rating-only NMF and the proposed coupled NMF on MovieLens latest-small.}
+\label{tab:ml_latest_small_plain_vs_coupled_delta}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+Metric & Plain NMF & Coupled NMF & Change & Change (%) & Better \\
+\midrule
+RMSE & 0.8339 & 0.8340 & 0.0001 & 0.01% & Plain NMF \\
+MAE & 0.6393 & 0.6379 & -0.0014 & -0.22% & Coupled NMF \\
+P@5 & 0.0256 & 0.0256 & -0.0000 & -0.12% & Plain NMF \\
+P@10 & 0.0224 & 0.0231 & 0.0007 & 3.26% & Coupled NMF \\
+R@5 & 0.0198 & 0.0205 & 0.0007 & 3.65% & Coupled NMF \\
+R@10 & 0.0333 & 0.0361 & 0.0028 & 8.45% & Coupled NMF \\
+NDCG@5 & 0.0273 & 0.0270 & -0.0003 & -1.08% & Plain NMF \\
+NDCG@10 & 0.0302 & 0.0312 & 0.0010 & 3.24% & Coupled NMF \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

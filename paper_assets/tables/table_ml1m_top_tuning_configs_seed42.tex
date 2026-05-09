@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{Top MovieLens 1M coupled NMF tuning configurations ranked by validation NDCG@10.}
+\label{tab:ml1m_top_tuning_configs_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\toprule
+$k$ & $\alpha$ & $\beta$ & $\lambda$ & RMSE & MAE & P@10 & R@10 & NDCG@10 & Fid.@10 \\
+\midrule
+60 & 0.0500 & 0.0001 & 0.0100 & 0.8632 & 0.6793 & 0.0447 & 0.0476 & 0.0569 & 0.3579 \\
+60 & 0.0500 & 0.0000 & 0.0100 & 0.8632 & 0.6793 & 0.0447 & 0.0476 & 0.0569 & 0.3579 \\
+60 & 0.0100 & 0.0000 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0100 & 0.0001 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0050 & 0.0001 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0050 & 0.0000 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0000 & 0.0000 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+60 & 0.0000 & 0.0001 & 0.0100 & 0.8632 & 0.6793 & 0.0446 & 0.0475 & 0.0568 & 0.3577 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize This table reports the strongest configurations from the reduced MovieLens 1M tuning grid. MovieLens 1M uses genre-only descriptors, which are coarser than the tag-and-genre representation used for MovieLens latest-small.
+\end{minipage}
+\end{table}

@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{Effect of coupled NMF tuning on MovieLens 1M using seed 42.}
+\label{tab:ml1m_tuned_vs_untuned_coupled_delta_seed42}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Metric & Untuned Coupled NMF & Tuned Coupled NMF & Change & Relative improvement \\
+\midrule
+RMSE & 0.8717 & 0.8594 & -0.0124 & 1.42\% \\
+MAE & 0.6890 & 0.6770 & -0.0120 & 1.74\% \\
+P@5 & 0.0386 & 0.0545 & 0.0160 & 41.37\% \\
+R@5 & 0.0211 & 0.0302 & 0.0091 & 42.84\% \\
+NDCG@5 & 0.0390 & 0.0591 & 0.0201 & 51.46\% \\
+P@10 & 0.0338 & 0.0459 & 0.0121 & 35.85\% \\
+R@10 & 0.0362 & 0.0506 & 0.0143 & 39.56\% \\
+NDCG@10 & 0.0406 & 0.0594 & 0.0187 & 46.16\% \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize Positive relative improvement means that the tuned model improves over the untuned coupled NMF. For RMSE and MAE, lower values are better; for ranking metrics, higher values are better.
+\end{minipage}
+\end{table}

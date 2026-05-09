@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\caption{Three-seed secondary validation on MovieLens 1M. Values are reported as mean $\pm$ standard deviation over seeds 42, 123, and 2026.}
+\label{tab:ml1m_3seed_secondary_validation}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccccc}
+\toprule
+Model & Seeds & RMSE & MAE & P@5 & R@5 & NDCG@5 & P@10 & R@10 & NDCG@10 \\
+\midrule
+Biased MF & 3 & $0.8498\pm 0.0012$ & $0.6681\pm 0.0008$ & $0.0471\pm 0.0021$ & $0.0274\pm 0.0019$ & $0.0515\pm 0.0021$ & $0.0428\pm 0.0014$ & $0.0497\pm 0.0024$ & $0.0551\pm 0.0022$ \\
+Plain NMF & 3 & $0.8509\pm 0.0009$ & $0.6697\pm 0.0008$ & $0.0537\pm 0.0014$ & $0.0305\pm 0.0009$ & $0.0597\pm 0.0020$ & $0.0473\pm 0.0008$ & $0.0543\pm 0.0009$ & $0.0620\pm 0.0015$ \\
+Tuned Coupled NMF & 3 & $0.8609\pm 0.0011$ & $0.6770\pm 0.0001$ & $0.0557\pm 0.0014$ & $0.0304\pm 0.0006$ & $0.0611\pm 0.0017$ & $0.0468\pm 0.0008$ & $0.0517\pm 0.0010$ & $0.0612\pm 0.0015$ \\
+\bottomrule
+\end{tabular}
+}
+\vspace{0.35em}
+\begin{minipage}{0.96\textwidth}
+\footnotesize MovieLens 1M is used as a larger secondary validation dataset with genre-only item descriptors. The tuned coupled NMF is evaluated with $k=60$, $\alpha=0.05$, $\beta=0.0001$, $\lambda=0.01$, and 20 training epochs. The coupled model is competitive with plain NMF in ranking quality and slightly improves short-list ranking metrics, although plain NMF remains stronger on prediction error and NDCG@10.
+\end{minipage}
+\end{table}

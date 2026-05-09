@@ -1,0 +1,17 @@
+dataset_name: ml_latest_small
+descriptor_source: tags_genres
+seeds: [42, 123, 2026, 7, 99]
+relevance_threshold: 4.0
+top_k: [5, 10]
+
+models:
+  - item_cf
+  - biased_mf
+  - plain_nmf
+  - coupled_nmf
+
+outputs:
+  main_comparison: results/csv/ml_latest_small_main_comparison.csv
+  run_level_metrics: results/csv/ml_latest_small_run_level_metrics.csv
+  explanation_metrics: results/csv/ml_latest_small_explanation_metrics_extended.csv
+  significance_tests: results/csv/ml_latest_small_significance_tests.csv

@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Main recommendation performance on MovieLens latest-small. Values are reported as mean $\pm$ standard deviation over five random seeds.}
+\label{tab:ml_latest_small_main_comparison}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccc}
+\toprule
+Model & RMSE & MAE & P@5 & P@10 & R@5 & R@10 & NDCG@5 & NDCG@10 \\
+\midrule
+Biased MF & $0.8239\pm 0.0033$ & $0.6279\pm 0.0036$ & $0.0291\pm 0.0030$ & $0.0266\pm 0.0013$ & $0.0226\pm 0.0038$ & $0.0435\pm 0.0037$ & $0.0314\pm 0.0043$ & $0.0372\pm 0.0035$ \\
+Plain NMF & $0.8339\pm 0.0038$ & $0.6393\pm 0.0049$ & $0.0256\pm 0.0038$ & $0.0224\pm 0.0028$ & $0.0198\pm 0.0062$ & $0.0333\pm 0.0080$ & $0.0273\pm 0.0051$ & $0.0302\pm 0.0052$ \\
+Coupled NMF & $0.8340\pm 0.0021$ & $0.6379\pm 0.0033$ & $0.0256\pm 0.0023$ & $0.0231\pm 0.0023$ & $0.0205\pm 0.0015$ & $0.0361\pm 0.0028$ & $0.0270\pm 0.0033$ & $0.0312\pm 0.0022$ \\
+Item-CF & $0.8942\pm 0.0034$ & $0.6874\pm 0.0031$ & $0.0070\pm 0.0010$ & $0.0079\pm 0.0009$ & $0.0047\pm 0.0012$ & $0.0098\pm 0.0018$ & $0.0073\pm 0.0012$ & $0.0096\pm 0.0013$ \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
