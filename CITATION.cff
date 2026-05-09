@@ -5,15 +5,16 @@ type: software
 authors:
   - family-names: Kanjilal
     given-names: Saikat
+    affiliation: "Department of Mathematics, JIS University, Kolkata, India"
   - family-names: Malakar
     given-names: Aritra
     affiliation: "Department of Mathematics, JIS University, Kolkata, India"
 repository-code: "https://github.com/Saikat-kanjilal/xai-coupled-nmf-recommendation"
-doi: 10.5281/zenodo.20093643
-url: "https://doi.org/10.5281/zenodo.20093643"
 license: MIT
 version: "1.0.0"
 date-released: "2026-05-09"
+doi: "10.5281/zenodo.20093643"
+url: "https://doi.org/10.5281/zenodo.20093643"
 keywords:
   - recommender systems
   - non-negative matrix factorization
