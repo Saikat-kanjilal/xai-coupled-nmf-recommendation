@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "Descriptor-Grounded Coupled NMF for Explainable Recommendation"
+message: "If you use this software or experimental outputs, please cite the associated manuscript and this repository."
+type: software
+authors:
+  - family-names: Kanjilal
+    given-names: Saikat
+    affiliation: "Department of Mathematics, JIS University, Kolkata, India"
+repository-code: "https://github.com/Saikat-kanjilal/xai-coupled-nmf-recommendation"
+license: MIT
+version: "1.0.0"
+date-released: "2026-05-09"
+keywords:
+  - recommender systems
+  - non-negative matrix factorization
+  - explainable recommendation
+  - collaborative filtering
+  - MovieLens
