@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20093643.svg)](https://doi.org/10.5281/zenodo.20093643)
+
 # Descriptor-Grounded Coupled NMF for Explainable Recommendation
 
 This repository contains the source code, configuration files, processed experimental outputs, manuscript-ready tables, and figures for the study on descriptor-grounded coupled non-negative matrix factorization for explainable recommendation.
